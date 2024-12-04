@@ -46,3 +46,12 @@ Output
 Describe the format of the output including files and visualizations. Treat this section like the results of
 a paper. You can look at readthedocs pages of popular bioinformatics tools to get inspired for this.
 
+<img width="656" alt="Screenshot 2024-12-04 at 2 33 03 AM" src="https://github.com/user-attachments/assets/65a79130-b387-48fe-8aad-817c5fc635c1">
+
+
+<img width="656" alt="Screenshot 2024-12-04 at 2 33 16 AM" src="https://github.com/user-attachments/assets/dccf2fda-f9d5-48b0-b78e-a7f359fcec43">
+
+
+<img width="612" alt="Screenshot 2024-12-04 at 2 31 07 AM" src="https://github.com/user-attachments/assets/cfb19789-eea8-47a9-aabc-9e00f4108b97">
+
+
