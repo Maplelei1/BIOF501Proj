@@ -1,5 +1,30 @@
 Standard Operating Procedure Template
 
+As part of your project, you must:
+◦ Describe the dataset, providing full accession details, number of individuals in the cohort,
+type of data (DNA, RNA, methylation, etc) and other relevant metadata
+◦ Some tools may accept several datasets or types (be specific and document flexibility)
+◦ Clearly define your control and test groups
+◦ Clearly state your hypothesis, aims and objectives
+◦ Clearly describe your environment (python version, NextFlow version, package versions, etc)
+Workflow creation
+
+
+The Standard Operating Procedure (SOP) must provide details on:
+◦ Information about the pipeline and what it aims to do
+◦ Expected results
+◦ Usage instructions so that another person can replicate your results
+◦ The setup of the environment as well as package versions so that it can be replicated
+easily
+◦ Information about the data used in the analysis (source, accession date, number of
+samples, disease status, etc.)
+◦ Any accessory programs that will be called (including version numbers)
+Workflow creation
+6
+
+
+
+
 Background and Rationale
 • include the what’s and why’s – also your aims
 • include any package dependencies that are required (bullet points are ok for this)
