@@ -36,25 +36,25 @@ Workflow creation
 
 
 
-### Running the Pipeline
+***Running the Pipeline***
 
 1. `cd` into your preferred working directory
    
 2. Clone this repository
 
-    ``` git clone https://github.com/Maplelei1/BIOF501Proj.git ```
+  ``` git clone https://github.com/Maplelei1/BIOF501Proj.git ```
 
 3. Pull the Docker container
 
-   ``` docker pull yangwu91/bioinfo ```
+  ``` docker pull yangwu91/bioinfo ```
 
 5. Run code with the `nextflow` command with docker
 
-    ``` nextflow run main1000.nf -with-docker ```
+  ``` nextflow run main1000.nf -with-docker ```
+   
+7. Sometimes, the pipeline runs in seconds. Sometimes, it seems to get stuck for a while. For subsequent runs, please `ctrl-C` to cancel the job and use the code below to ensure you do not need to repeat any previously cached processes
 
-6. For subsequent runs, use the code below to ensure you do not need to repeat any previously cached processes
-
-    ``` nextflow run main1000.nf -with-docker -resume ```
+   ``` nextflow run main1000.nf -with-docker -resume ```
 
    
 
@@ -70,10 +70,23 @@ star - 2.7.11b
 
 
 
-**Inputs**
+## **Inputs**
+
+**fastq files***
 
 The single-end RNA sequencing data can be found [here](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE71562)  
-Describe the format of the input data, explaining all fields.
+This repository uses a subsetted version of the `.fastq` files from the following SRA accession codes:
+
+SRR2135663 - Control1
+SRR2135669 - Control2
+SRR2135668 - Treatment1
+SRR2135674 - Treatment2
+
+Subsetting the files into 1000 reads was completed by the following commad:
+
+```seqtk sample -s100 SRR2135663.fastq 1000 > 1000sub_control1.fastq ```
+
+Below are the
 
 
 
