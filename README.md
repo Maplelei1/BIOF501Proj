@@ -8,7 +8,7 @@ STAR (Spliced Transcripts Alignment to a Reference) is a tool widely used for RN
 
 ## Pipeline
 
-This pipeline uses single-end RNA sequencing fastq reads from E. coli to understand and compare the transcriptome when bacterial cells are subject to anaerobic-aerobic transition. It aims to generate fastqc reports for all samples, 2 sample files for control - cells grown in anaerobic conditions, and 2 sample files for cells subject to 10 minutes of aeration after being grown in anaerobic conditions. Then 
+This pipeline uses single-end RNA sequencing fastq reads from E. coli to understand and compare the transcriptome when bacterial cells are subject to anaerobic-aerobic transition. It aims to generate fastqc reports for all samples, 2 sample files for control - cells grown in anaerobic conditions, and 2 sample files for cells subject to 10 minutes of aeration after being grown in anaerobic conditions. Then, a star genome index with reference genome and annotation files in order to perform star alignment. 4 alignments are carried out, one for each sample in order to provide adequate data for potential downstream gene expression analysis. The main end-product in this pipeline would be the visual that displays a proportion of gene metrics corresponding to "N_unmapped", "N_multimapping", "N_noFeature", and "N_ambiguous" reads. Combined with the FASTQC reports, this provides insights into the quality of RNA sequencing data.  
 
 • include the what’s and why’s – also your aims
 • include any package dependencies that are required (bullet points are ok for this)
