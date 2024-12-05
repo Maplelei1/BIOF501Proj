@@ -68,6 +68,8 @@ Below are some sample graphs from the first FASTQC HTML report named 1000sub_con
 
 <img width="656" alt="Screenshot 2024-12-04 at 2 33 16 AM" src="https://github.com/user-attachments/assets/dccf2fda-f9d5-48b0-b78e-a7f359fcec43">
 
+''' /work/.../.../gene_metadata_proportions_with_percentages.png '''
+
 The last process, GENE_METADATA_PROPORTIONS produces a .png file that visualizes the porpotion of reads that are ambiguous, multimapped, unmapped, or having no features. 
 
 <img width="612" alt="Screenshot 2024-12-04 at 2 31 07 AM" src="https://github.com/user-attachments/assets/cfb19789-eea8-47a9-aabc-9e00f4108b97">
