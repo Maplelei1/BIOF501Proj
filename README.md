@@ -4,7 +4,7 @@
 
 Transcriptome data is increasingly analyzed in computational biology research as the dataset that reveals insights into the gene expression of organsisms. Compared to analyzing the genome, the transcriptome is able to track how an orgnism is actively carrying out cellular processes with genes and proteins. In order to unearth information from the trasncriptome, sequencing must be performed on a sample, and those sequences must be aligned to an indexed genome. Thus, it is highly important to use computational tools for RNA-seq that allow researchers to analyze RNA quickly and accurately. 
 
-STAR (Spliced Transcripts Alignment to a Reference) is a tool widely used for RNA-seq analysis. It is regarded as one of the fastest and accurate aligners available and is curated for RNA data. STAR features splice-aware alignement as it reads across exon-exon junctions, so the software has greater understadning of where splicing occurs. STAR has high speed and fidelity and can handle large datasets and genomes as well as both single and paired-end seqeuncing. STAR will create an index with a .fna file with the genome and a .gtf file with annotations. Then, it is able to take .fastq files to align sequences to the indexed genome. It outputs SAM/BAM files for viewing in programs such as IGV, as a ReadsPerGene.out.tab file which contains gene counts for downstream processes such as PCA plotting or differential expression analysis. In every ReadsPerGene.out.tab file, there is metadata at the top that contains information about the number of reads that are "N_unmapped", "N_multimapping", "N_noFeature", and "N_ambiguous". Respectively, these terms refer to the number of genes that were unsucccesfuly mapped to the genome, mapped to multiple locations in the genome, genes that do not overlap with any known features, and genes that map to multiple features. This reveals important data about the status of how reads were aligned with the genome and adds insights into the quality and interpretability of the data. It is important to procure both data to use for further analysis as well as understand what limitations the working data may have. 
+STAR (Spliced Transcripts Alignment to a Reference) is a tool widely used for RNA-seq analysis. It is regarded as one of the fastest and accurate aligners available and is curated for RNA data. STAR features splice-aware alignement as it reads across exon-exon junctions, so the software has greater understadning of where splicing occurs. STAR has high speed and fidelity and can handle large datasets and genomes as well as both single and paired-end seqeuncing. STAR will create an index with a `.fna` file with the genome and a `.gtf` file with annotations. Then, it is able to take `.fastq` files to align sequences to the indexed genome. It outputs SAM/BAM files for viewing in programs such as IGV, as a `ReadsPerGene.out.tab` file which contains gene counts for downstream processes such as PCA plotting or differential expression analysis. In every ReadsPerGene.out.tab file, there is metadata at the top that contains information about the number of reads that are "N_unmapped", "N_multimapping", "N_noFeature", and "N_ambiguous". Respectively, these terms refer to the number of genes that were unsucccesfuly mapped to the genome, mapped to multiple locations in the genome, genes that do not overlap with any known features, and genes that map to multiple features. This reveals important data about the status of how reads were aligned with the genome and adds insights into the quality and interpretability of the data. It is important to procure both data to use for further analysis as well as understand what limitations the working data may have. 
 
 ## Pipeline
 
@@ -16,11 +16,10 @@ This pipeline uses single-end RNA sequencing fastq reads from E. coli to underst
 
 <img width="638" alt="Screenshot 2024-12-04 at 7 44 34 PM" src="https://github.com/user-attachments/assets/b4126c01-2327-4750-ae9e-f2cbcc3febd5">
 
-The single-end RNA sequencing data can be found [here](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE71562) 
 
 ## Data 
 
-The single-end RNA sequencing data can be found here.  https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE71562 
+The single-end RNA sequencing data can be found [here](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE71562) 
 
 As part of your project, you must:
 ◦ Describe the dataset, providing full accession details, number of individuals in the cohort,
@@ -61,16 +60,18 @@ Describe the format of the input data, explaining all fields.
 
 ## **Outputs**
 
-Below are some sample graphs from the first FASTQC HTML report named 1000sub_control1_fastqc.html. All output can be found in the work/ directory within the appropriate subdirectory as indicated by the nextflow process. 
+Below are some sample graphs from the first FASTQC HTML report named `1000sub_control1_fastqc.html`. All output can be found in the `work/` directory within the appropriate subdirectory as indicated by the nextflow process. 
+
+``` /work/.../.../1000sub_control1_fastqc.html ```
 
 <img width="656" alt="Screenshot 2024-12-04 at 2 33 03 AM" src="https://github.com/user-attachments/assets/65a79130-b387-48fe-8aad-817c5fc635c1">
 
 
 <img width="656" alt="Screenshot 2024-12-04 at 2 33 16 AM" src="https://github.com/user-attachments/assets/dccf2fda-f9d5-48b0-b78e-a7f359fcec43">
 
-''' /work/.../.../gene_metadata_proportions_with_percentages.png '''
+``` /work/.../.../gene_metadata_proportions_with_percentages.png ```
 
-The last process, GENE_METADATA_PROPORTIONS produces a .png file that visualizes the porpotion of reads that are ambiguous, multimapped, unmapped, or having no features. 
+The last process, `GENE_METADATA_PROPORTIONS` produces a `.png` file that visualizes the porpotion of reads that are ambiguous, multimapped, unmapped, or having no features. 
 
 <img width="612" alt="Screenshot 2024-12-04 at 2 31 07 AM" src="https://github.com/user-attachments/assets/cfb19789-eea8-47a9-aabc-9e00f4108b97">
 
