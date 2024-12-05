@@ -16,7 +16,11 @@ This pipeline uses single-end RNA sequencing fastq reads from E. coli to underst
 
 <img width="638" alt="Screenshot 2024-12-04 at 7 44 34 PM" src="https://github.com/user-attachments/assets/b4126c01-2327-4750-ae9e-f2cbcc3febd5">
 
+The single-end RNA sequencing data can be found [here] (https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE71562) 
+
 ## Data 
+
+The single-end RNA sequencing data can be found here.  https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE71562 
 
 As part of your project, you must:
 ◦ Describe the dataset, providing full accession details, number of individuals in the cohort,
