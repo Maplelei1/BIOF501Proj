@@ -1,4 +1,15 @@
-Standard Operating Procedure Template
+# **RNA-Seq Alignment with STAR**
+
+## Background & Rationale
+
+Transcriptome data is increasingly analyzed in computational biology research as the dataset that reveals insights into the gene expression of organsisms. Compared to analyzing the genome, the transcriptome is able to track how an orgnism is actively carrying out cellular processes with genes and proteins. In order to unearth information from the trasncriptome, sequencing must be performed on a sample, and those sequences must be aligned to an indexed genome. Thus, it is highly important to use computational tools for RNA-seq that allow researchers to analyze RNA quickly and accurately. 
+
+STAR (Spliced Transcripts Alignment to a Reference) is a tool widely used for RNA-seq analysis. It is regarded as one of the fastest and accurate aligners available and is curated for RNA data. STAR features splice-aware alignement as it reads across exon-exon junctions
+
+• include the what’s and why’s – also your aims
+• include any package dependencies that are required (bullet points are ok for this)
+• You can include your DAG here
+
 
 As part of your project, you must:
 ◦ Describe the dataset, providing full accession details, number of individuals in the cohort,
@@ -20,17 +31,12 @@ easily
 samples, disease status, etc.)
 ◦ Any accessory programs that will be called (including version numbers)
 Workflow creation
-6
 
 
 
 
-Background and Rationale
-• include the what’s and why’s – also your aims
-• include any package dependencies that are required (bullet points are ok for this)
-• You can include your DAG here
 
-Usage
+**Usage**
 Make sure you format everything so that step by step usage details are included. If we can’t run your
 pipeline then we can’t give you marks.
 • Installation (if necessary) including any datasets that are to be used if they are not provided
@@ -39,10 +45,10 @@ must be accessible)
 • Exact step by step usage with descriptive comments on what action is being performed in each
 step
 
-Input
+**Input**
 Describe the format of the input data, explaining all fields.
 
-Output
+**Output**
 Describe the format of the output including files and visualizations. Treat this section like the results of
 a paper. You can look at readthedocs pages of popular bioinformatics tools to get inspired for this.
 
