@@ -16,7 +16,7 @@ This pipeline uses single-end RNA sequencing fastq reads from E. coli to underst
 
 <img width="638" alt="Screenshot 2024-12-04 at 7 44 34 PM" src="https://github.com/user-attachments/assets/b4126c01-2327-4750-ae9e-f2cbcc3febd5">
 
-The single-end RNA sequencing data can be found [here] (https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE71562) 
+The single-end RNA sequencing data can be found [here](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE71562) 
 
 ## Data 
 
@@ -56,18 +56,19 @@ must be accessible)
 • Exact step by step usage with descriptive comments on what action is being performed in each
 step
 
-**Input**
+**Inputs**
 Describe the format of the input data, explaining all fields.
 
-**Output**
-Describe the format of the output including files and visualizations. Treat this section like the results of
-a paper. You can look at readthedocs pages of popular bioinformatics tools to get inspired for this.
+## **Outputs**
+
+Below are some sample graphs from the first FASTQC HTML report named 1000sub_control1_fastqc.html. All output can be found in the work/ directory within the appropriate subdirectory as indicated by the nextflow process. 
 
 <img width="656" alt="Screenshot 2024-12-04 at 2 33 03 AM" src="https://github.com/user-attachments/assets/65a79130-b387-48fe-8aad-817c5fc635c1">
 
 
 <img width="656" alt="Screenshot 2024-12-04 at 2 33 16 AM" src="https://github.com/user-attachments/assets/dccf2fda-f9d5-48b0-b78e-a7f359fcec43">
 
+The last process, GENE_METADATA_PROPORTIONS produces a .png file that visualizes the porpotion of reads that are ambiguous, multimapped, unmapped, or having no features. 
 
 <img width="612" alt="Screenshot 2024-12-04 at 2 31 07 AM" src="https://github.com/user-attachments/assets/cfb19789-eea8-47a9-aabc-9e00f4108b97">
 
