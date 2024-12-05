@@ -10,16 +10,8 @@ STAR (Spliced Transcripts Alignment to a Reference) is a tool widely used for RN
 
 This pipeline uses single-end RNA sequencing fastq reads from E. coli to understand and compare the transcriptome when bacterial cells are subject to anaerobic-aerobic transition. It aims to generate fastqc reports for all samples, 2 sample files for control - cells grown in anaerobic conditions, and 2 sample files for cells subject to 10 minutes of aeration after being grown in anaerobic conditions. Then, a star genome index with reference genome and annotation files in order to perform star alignment. 4 alignments are carried out, one for each sample in order to provide adequate data for potential downstream gene expression analysis. The main end-product in this pipeline would be the visual that displays a proportion of gene metrics corresponding to "N_unmapped", "N_multimapping", "N_noFeature", and "N_ambiguous" reads. Combined with the FASTQC reports, this provides insights into the quality of RNA sequencing data.  
 
-• include the what’s and why’s – also your aims
-• include any package dependencies that are required (bullet points are ok for this)
-• You can include your DAG here
-
 <img width="638" alt="Screenshot 2024-12-04 at 7 44 34 PM" src="https://github.com/user-attachments/assets/b4126c01-2327-4750-ae9e-f2cbcc3febd5">
 
-
-## Data 
-
-The single-end RNA sequencing data can be found [here](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE71562) 
 
 As part of your project, you must:
 ◦ Describe the dataset, providing full accession details, number of individuals in the cohort,
@@ -43,27 +35,43 @@ samples, disease status, etc.)
 Workflow creation
 
 
-
-
-
 **Usage**
 
 ***Pre-requisites***
 
-- Docker Desktop version 4.35.1 - [Install]()
-- Nextflow version 24.10.0 - [Install]()
+- Docker Desktop version 4.35.1 - [Install](https://docs.docker.com/get-started/get-docker/)
+- Nextflow version 24.10.0 - [Install](https://www.nextflow.io/docs/latest/install.html)
 
 ### Running the Pipeline
 
 1. `cd` into your preferred working directory
+   
 2. Clone this repository
-   ``` git clone https://github.com/Maplelei1/BIOF501Proj.git ```
-3. Run code with the `nextflow` command with docker
-   ``` nextflow run main1000.nf -with-docker ```
-4. For subsequent runs, use the code below to ensure you do not need to repeat any previously cached processes
-   ``` nextflow run main1000.nf -with-docker -resume ```
+
+    ``` git clone https://github.com/Maplelei1/BIOF501Proj.git ```
+
+3. Pull the Docker container
+
+   ``` docker pull yangwu91/bioinfo ```
+
+5. Run code with the `nextflow` command with docker
+
+    ``` nextflow run main1000.nf -with-docker ```
+
+6. For subsequent runs, use the code below to ensure you do not need to repeat any previously cached processes
+
+    ``` nextflow run main1000.nf -with-docker -resume ```
    
 
+### Container
+
+This pipeline uses a Docker container called `yangwu91/bioinfo` that has a relevant assortment of pre-installed bioinformatics utilities. You can find the git for the container [here](https://github.com/yangwu91/bioinfo-docker).
+
+fastqc - v0.12.1
+
+Another container is the `quay.io/biocontainers/star:2.7.11b--h43eeafb_3` which contains:
+
+star - 2.7.11b
 
 Make sure you format everything so that step by step usage details are included. If we can’t run your
 pipeline then we can’t give you marks.
@@ -74,6 +82,8 @@ must be accessible)
 step
 
 **Inputs**
+
+The single-end RNA sequencing data can be found [here](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE71562)  
 Describe the format of the input data, explaining all fields.
 
 ## **Outputs**
