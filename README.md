@@ -47,6 +47,24 @@ Workflow creation
 
 
 **Usage**
+
+***Pre-requisites***
+
+- Docker Desktop version 4.35.1 - [Install]()
+- Nextflow version 24.10.0 - [Install]()
+
+### Running the Pipeline
+
+1. `cd` into your preferred working directory
+2. Clone this repository
+   ``` git clone https://github.com/Maplelei1/BIOF501Proj.git ```
+3. Run code with the `nextflow` command with docker
+   ``` nextflow run main1000.nf -with-docker ```
+4. For subsequent runs, use the code below to ensure you do not need to repeat any previously cached processes
+   ``` nextflow run main1000.nf -with-docker -resume ```
+   
+
+
 Make sure you format everything so that step by step usage details are included. If we can’t run your
 pipeline then we can’t give you marks.
 • Installation (if necessary) including any datasets that are to be used if they are not provided
