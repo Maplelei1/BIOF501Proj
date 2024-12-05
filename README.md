@@ -4,7 +4,9 @@
 
 Transcriptome data is increasingly analyzed in computational biology research as the dataset that reveals insights into the gene expression of organsisms. Compared to analyzing the genome, the transcriptome is able to track how an orgnism is actively carrying out cellular processes with genes and proteins. In order to unearth information from the trasncriptome, sequencing must be performed on a sample, and those sequences must be aligned to an indexed genome. Thus, it is highly important to use computational tools for RNA-seq that allow researchers to analyze RNA quickly and accurately. 
 
-STAR (Spliced Transcripts Alignment to a Reference) is a tool widely used for RNA-seq analysis. It is regarded as one of the fastest and accurate aligners available and is curated for RNA data. STAR features splice-aware alignement as it reads across exon-exon junctions
+STAR (Spliced Transcripts Alignment to a Reference) is a tool widely used for RNA-seq analysis. It is regarded as one of the fastest and accurate aligners available and is curated for RNA data. STAR features splice-aware alignement as it reads across exon-exon junctions, so the software has greater understadning of where splicing occurs. STAR has high speed and fidelity and can handle large datasets and genomes as well as both single and paired-end seqeuncing. STAR will create an index with a .fna file with the genome and a .gtf file with annotations. Then, it is able to take .fastq files to align sequences to the indexed genome. It outputs SAM/BAM files for viewing in programs such as IGV, as a ReadsPerGene.out.tab file which contains gene counts for downstream processes such as PCA plotting or differential expression analysis. 
+
+In this pipeline we use RNA sequencing fastq reads from E. coli to understand and compare the transcriptome when bacterial cells are subject to anaerobic-aerobic transition. 
 
 • include the what’s and why’s – also your aims
 • include any package dependencies that are required (bullet points are ok for this)
