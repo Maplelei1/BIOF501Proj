@@ -30,21 +30,23 @@ This pipeline uses single-end RNA sequencing fastq reads from E. coli to underst
 
 **Running the Pipeline**
 
-1. `cd` into your preferred working directory
+1. `cd` into your preferred working directory 
    
 2. Clone this repository
 
   ``` git clone https://github.com/Maplelei1/BIOF501Proj.git ```
 
-3. Pull the Docker container
+3. `cd` into the repository 
+
+4. Pull the Docker container
 
   ``` docker pull yangwu91/bioinfo ```
 
-4. Run code with the `nextflow` command with docker
+5. Run code with the `nextflow` command with docker
 
   ``` nextflow run main1000.nf -with-docker ```
    
-5. Sometimes, the pipeline runs in seconds. Sometimes, it seems to get stuck for a while. For subsequent runs, please `ctrl-C` to cancel the job and use the code below to ensure you do not need to repeat any previously cached processes
+6. Sometimes, the pipeline runs in seconds. Sometimes, it seems to get stuck for a while. For subsequent runs, please `ctrl-C` to cancel the job and use the code below to ensure you do not need to repeat any previously cached processes
 
    ``` nextflow run main1000.nf -with-docker -resume ```
 
@@ -52,14 +54,13 @@ This pipeline uses single-end RNA sequencing fastq reads from E. coli to underst
 
 ### Container
 
-This pipeline uses a Docker container called `yangwu91/bioinfo` that has a relevant assortment of pre-installed bioinformatics utilities. You can find the git for the container [here](https://github.com/yangwu91/bioinfo-docker).
+Below are the containers used in this pipeline and the versions of the corresponding commands. 
 
-fastqc - v0.12.1
+##### fastqc - v0.12.1
+`quay.io/biocontainers/fastqc:0.12.1--hdfd78af_0`
 
-Another container is the `quay.io/biocontainers/star:2.7.11b--h43eeafb_3` which contains:
-
-star - 2.7.11b
-
+##### star - 2.7.11b
+`quay.io/biocontainers/star:2.7.11b--h43eeafb_3`
 
 
 ## **Inputs**
