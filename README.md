@@ -1,4 +1,4 @@
-# **RNA-Seq Alignment with STAR**
+# **Quality Insights for RNA-Seq Alignment with STAR**
 
 ## Background & Rationale
 
