@@ -29,14 +29,14 @@ Workflow creation
 ## **Usage**
 
 
-***Pre-requisites***
+**Pre-requisites**
 
 - Docker Desktop version 4.35.1 - [Install](https://docs.docker.com/get-started/get-docker/)
 - Nextflow version 24.10.0 - [Install](https://www.nextflow.io/docs/latest/install.html)
 
 
 
-***Running the Pipeline***
+**Running the Pipeline**
 
 1. `cd` into your preferred working directory
    
@@ -72,7 +72,8 @@ star - 2.7.11b
 
 ## **Inputs**
 
-**fastq files***
+**fastq files**
+```/data/1000sub_control1.fastq```
 
 The single-end RNA sequencing data can be found [here](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE71562)  
 This repository uses a subsetted version of the `.fastq` files from the following SRA accession codes:
@@ -86,7 +87,11 @@ Subsetting the files into 1000 reads was completed by the following commad:
 
 ```seqtk sample -s100 SRR2135663.fastq 1000 > 1000sub_control1.fastq ```
 
-Below are the
+**reference files**
+The /data directory also contains reference genome and annotation files, found at the link [here](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/002/853/715/GCF_002853715.1_ASM285371v1/).
+
+```/data/genome.fna```
+```/data/annotations.gtf```
 
 
 
